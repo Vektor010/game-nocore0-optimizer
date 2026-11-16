@@ -1,4 +1,4 @@
-@(set "0=%~f0" '& set 1=%*) & powershell -NoProfile -ExecutionPolicy Bypass -Command "$c=[System.IO.File]::ReadAllText($env:0, [System.Text.Encoding]::UTF8); Invoke-Expression ($c.Substring($c.IndexOf([char]10)+1))" & exit /b
+@(set "0=%~f0" '& set 1=%*) & powershell -Sta -NoProfile -ExecutionPolicy Bypass -Command "$c=[System.IO.File]::ReadAllText($env:0, [System.Text.Encoding]::UTF8); Invoke-Expression ($c.Substring($c.IndexOf([char]10)+1))" & exit /b
 
 # ===================================================================
 # Game No-Core-0 Manager: Native Windows IFEO Process Affinity Tuner
@@ -67,14 +67,11 @@ $ifeoBase = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execu
 # Functions
 function Add-GameToIFEO {
     param([string]$ExeName)
-    $cleanName = [System.IO.Path]::GetFileName($ExeName).Trim()
-    if (-not $cleanName -or -not $cleanName.EndsWith('.exe', [System.StringComparison]::OrdinalIgnoreCase)) {
-        if ($script:isRu) {
-            Write-Host " [-] Ошибка: '$ExeName' не является исполняемым файлом .exe" -ForegroundColor Red
-        } else {
-            Write-Host " [-] Error: '$ExeName' is not a valid .exe executable file" -ForegroundColor Red
-        }
-        return $false
+    $sanitized = if ($ExeName) { $ExeName.Trim().Trim('"').Trim("'") } else { "" }
+    if (-not $sanitized) { return $false }
+    $cleanName = [System.IO.Path]::GetFileName($sanitized).Trim()
+    if (-not $cleanName.EndsWith('.exe', [System.StringComparison]::OrdinalIgnoreCase)) {
+        $cleanName += ".exe"
     }
     
     $keyPath = "$ifeoBase\$cleanName\PerfOptions"
@@ -97,7 +94,12 @@ function Add-GameToIFEO {
 
 function Remove-GameFromIFEO {
     param([string]$ExeName)
-    $cleanName = [System.IO.Path]::GetFileName($ExeName).Trim()
+    $sanitized = if ($ExeName) { $ExeName.Trim().Trim('"').Trim("'") } else { "" }
+    if (-not $sanitized) { return $false }
+    $cleanName = [System.IO.Path]::GetFileName($sanitized).Trim()
+    if (-not $cleanName.EndsWith('.exe', [System.StringComparison]::OrdinalIgnoreCase)) {
+        $cleanName += ".exe"
+    }
     $keyPath = "$ifeoBase\$cleanName\PerfOptions"
     if (Test-Path $keyPath) {
         try {
@@ -344,6 +346,7 @@ if ($cleanArgs) {
 # SCENARIO 2: INTERACTIVE MENU (DOUBLE CLICK)
 # ===================================================================
 while ($true) {
+    $Host.UI.RawUI.WindowTitle = if ($script:isRu) { "Менеджер Игр: Без Ядра 0 (0x$affinityHex)" } else { "Game No-Core-0 Manager (0x$affinityHex)" }
     Clear-Host
     Write-Host "===================================================================" -ForegroundColor Cyan
     Write-Host $(if ($script:isRu){"   МЕНЕДЖЕР ИГР БЕЗ ЯДРА 0 (IFEO) — RYZEN / CORE i (0x$affinityHex)   "}else{"   GAME NO-CORE-0 MANAGER (IFEO) — RYZEN / CORE i (0x$affinityHex)    "}) -ForegroundColor Cyan
@@ -354,7 +357,7 @@ while ($true) {
     Write-Host $(if ($script:isRu){" [ИНФО] Метод:     Нативный реестр Windows NT (0% фона, 0 МБ ОЗУ, VAC/EAC safe)"}else{" [INFO] Engine:    Native Windows NT Registry (0% Background RAM, VAC/EAC safe)"}) -ForegroundColor Gray
     Write-Host "===================================================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host $(if ($script:isRu){" [1] Зарегистрировать 100+ популярных игр (CS2, GTA 6/5, FH6, Скайрим, Wukong, KCD 2 и др.)"}else{" [1] Register 100+ Popular Games (CS2, GTA 6/5, FH6, Skyrim, Wukong, KCD 2, etc.)"}) -ForegroundColor White
+    Write-Host $(if ($script:isRu){" [1] Зарегистрировать 140+ популярных игр (CS2, GTA 6/5, FH, Survival, Скайрим, Wukong и др.)"}else{" [1] Register 140+ Popular Games (CS2, GTA 6/5, FH, Survival, Skyrim, Wukong, etc.)"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [2] Выбрать игру через проводник (кнопка 'Обзор')"}else{" [2] Browse .exe file via Explorer picker"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [3] Ввести имя файла .exe вручную (например: mygame.exe)"}else{" [3] Enter .exe file name manually (e.g. mygame.exe)"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [4] Список всех настроенных сейчас игр"}else{" [4] List all currently configured games"}) -ForegroundColor White
@@ -378,7 +381,7 @@ while ($true) {
         }
         "1" {
             Clear-Host
-            Write-Host $(if ($script:isRu){"=== Регистрация пакета из 30 популярных игр ==="}else{"=== Registering 30 Popular Games Preset ==="}) -ForegroundColor Cyan
+            Write-Host $(if ($script:isRu){"=== Регистрация полного пакета популярных игр (140+ игр) ==="}else{"=== Registering Popular Games Preset (140+ Games) ==="}) -ForegroundColor Cyan
             foreach ($g in $popularGames) {
                 Write-Host "`n[*] $($g.Name)..." -ForegroundColor White
                 foreach ($exe in $g.Exes) {
@@ -436,7 +439,7 @@ while ($true) {
         "6" {
             Write-Host ""
             $confirm = Read-Host $(if ($script:isRu){"Вы действительно хотите удалить ВСЕ игры из списка IFEO? (y/n)"}else{"Are you sure you want to remove ALL games from IFEO? (y/n)"})
-            if ($confirm -eq 'y' -or $confirm -eq 'д') {
+            if ($confirm -match '^(y|yes|д|да)$') {
                 $list = Get-ConfiguredGames
                 foreach ($item in $list) {
                     Remove-GameFromIFEO $item.ExeName | Out-Null
@@ -450,7 +453,8 @@ while ($true) {
             Clear-Host
             Write-Host $(if ($script:isRu){"=== Настройка Контекстного Меню Проводника Windows ==="}else{"=== Configure Windows Explorer Context Menu ==="}) -ForegroundColor Cyan
             Write-Host $(if ($script:isRu){"Добавляет пункт при нажатии правой кнопкой мыши (ПКМ) на любой .exe:"}else{"Adds a right-click menu item for any .exe file:"}) -ForegroundColor White
-            Write-Host " -> '🎮 Run without Core 0 (IFEO 0x$affinityHex)'" -ForegroundColor Green
+            $menuPreview = if ($script:isRu) { "🎮 Настроить без Ядра 0 (0x$affinityHex)" } else { "🎮 Optimize: No Core 0 (0x$affinityHex)" }
+            Write-Host " -> '$menuPreview'" -ForegroundColor Green
             Write-Host ""
             Write-Host $(if ($script:isRu){" [1] Установить пункт в контекстное меню"}else{" [1] Install context menu item"}) -ForegroundColor White
             Write-Host $(if ($script:isRu){" [2] Удалить пункт из контекстного меню"}else{" [2] Uninstall context menu item"}) -ForegroundColor Yellow
@@ -461,7 +465,8 @@ while ($true) {
                 try {
                     $batPath = $env:0
                     New-Item -Path $ctxPath -Force | Out-Null
-                    Set-ItemProperty -Path $ctxPath -Name "(Default)" -Value "🎮 Run without Core 0 (0x$affinityHex)" -Force
+                    $menuText = if ($script:isRu) { "🎮 Настроить без Ядра 0 (0x$affinityHex)" } else { "🎮 Optimize: No Core 0 (0x$affinityHex)" }
+                    Set-ItemProperty -Path $ctxPath -Name "(Default)" -Value $menuText -Force
                     Set-ItemProperty -Path $ctxPath -Name "Icon" -Value "imageres.dll,-109" -Force
                     $cmdPath = "$ctxPath\command"
                     New-Item -Path $cmdPath -Force | Out-Null
