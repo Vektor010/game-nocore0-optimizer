@@ -1,6 +1,8 @@
 # NoCore0 Gaming Optimizer for Windows
 
-Native Windows process affinity tuner designed to eliminate 1% low frame drops and input stutter by dedicating CPU Core 0 exclusively to operating system DPC interrupts and background tasks, while routing game engines to high-performance cores.
+> Native Windows process affinity tuner designed to eliminate 1% low frame drops and input stutter by dedicating CPU Core 0 exclusively to operating system DPC interrupts and background tasks, while routing game engines to high-performance cores.
+
+🌐 **[English](README.md)** • **[Русская версия](README_RU.md)**
 
 ![Banner](assets/banner.svg)
 
