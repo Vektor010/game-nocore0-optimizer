@@ -1,0 +1,98 @@
+Windows Registry Editor Version 5.00
+
+; ===================================================================
+; Game No-Core-0 Optimizer: 30 Popular Games Preset
+; Mask 0x0000FFFC (65532) for 8C/16T processors (Ryzen 7 9850X3D, 7800X3D, 5800X3D, 9700X, 7700X, etc.)
+; Completely frees Core 0 (CPU 0 + CPU 1) for Windows OS & background tasks
+; 0% background apps, 0 MB RAM, VAC / EAC / Vanguard safe
+; ===================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cs2.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\proxy_sa.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\gta_sa.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Multi Theft Auto.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\CCDPlanet.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\hassle.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ROB RUN.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\BeamNG.drive.x64.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\BeamNG.drive.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\eurotrucks2.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GTA5.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\PlayGTAV.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\FortniteClient-Win64-Shipping.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\dota2.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\project8.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\r5apex.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\TslGame.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RustClient.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Cyberpunk2077.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\VALORANT-Win64-Shipping.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cod.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\aces.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\WorldOfTanks.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Overwatch.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RainbowSix.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RainbowSix_Vulkan.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EscapeFromTarkov.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RobloxPlayerBeta.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RocketLeague.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Marvel-Win64-Shipping.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
