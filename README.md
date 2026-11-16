@@ -15,32 +15,113 @@ If you just downloaded the project and want the maximum performance boost with z
 1. **Extract** the downloaded `.zip` archive to any folder.
 2. **Double-click** `Game_NoCore0_Manager.bat`.
 3. In the menu that appears, **press `1` and hit Enter**.
-4. **Done!** All 30 popular multiplayer games (CS2, GTA V, Fortnite, Dota 2, MTA, etc.) are instantly configured in the Windows kernel.
+4. **Done!** 70+ popular games (CS2, GTA V, Wukong, Stalker 2, RDR2, Elden Ring, MTA, Cyberpunk, etc.) are instantly configured in the Windows kernel.
 5. **Launch your games normally** (from Steam, Epic Games, server launchers, or desktop shortcuts). They will now automatically run without Core 0!
 
-> **Got a new game?** Simply drag and drop its desktop shortcut or `.exe` file onto `Game_NoCore0_Manager.bat`. That's it!
+> 💡 **Got a new game?** Simply drag and drop its desktop shortcut or `.exe` file onto `Game_NoCore0_Manager.bat`. The tweak applies in 0.1s!
 
 ---
 
-## Features
+## 🎮 Supported Games (70+ Master Preset)
 
-- **0% Background Overhead**: Implemented strictly via native Windows NT Image File Execution Options (`IFEO`). No resident background services, no RAM usage.
-- **Universal Compatibility**: Works with Steam, Epic Games, independent launchers, and direct shortcuts.
-- **Anti-Cheat Safe**: Uses standard Windows kernel scheduling parameters (`CpuAffinityMask`). Fully compliant with modern anti-cheat systems.
-- **Dynamic Topology Calculation**: Automatically computes the exact affinity bitmask for your specific CPU topology (e.g., `0xFFFC` for 8C/16T processors).
-- **Drag-and-Drop Workflow**: Simply drop any game executable or desktop shortcut onto `Game_NoCore0_Manager.bat`.
-- **100% Reversible**: Includes instant revert scripts to restore default Windows scheduling.
+Option `[1]` and `Preset_Popular_Games.reg` include pre-configured support for the top PC games across Steam, Epic Games, Battle.net, and Rockstar:
+
+### 🏆 Competitive & Battle Royale
+* **Counter-Strike 2** (`cs2.exe`)
+* **VALORANT** (`VALORANT-Win64-Shipping.exe`)
+* **Fortnite** (`FortniteClient-Win64-Shipping.exe`)
+* **Apex Legends** (`r5apex.exe`)
+* **PUBG: BATTLEGROUNDS** (`TslGame.exe`)
+* **Call of Duty: Warzone / BO6 / MW3** (`cod.exe`)
+* **Rainbow Six Siege** (`RainbowSix.exe`, `RainbowSix_Vulkan.exe`)
+* **Overwatch 2** (`Overwatch.exe`)
+* **Deadlock** (`project8.exe`)
+* **Marvel Rivals** (`Marvel-Win64-Shipping.exe`)
+* **The Finals** (`Discovery.exe`)
+* **Rust** (`RustClient.exe`)
+* **Escape from Tarkov** (`EscapeFromTarkov.exe`)
+* **Hunt: Showdown 1896** (`HuntGame.exe`)
+* **Team Fortress 2** (`tf_win64.exe`, `tf.exe`)
+
+### ⚔️ Single-Player AAA Masterpieces (Steam & Epic Games)
+* **Black Myth: Wukong** (`b1-Win64-Shipping.exe`)
+* **S.T.A.L.K.E.R. 2: Heart of Chornobyl** (`Stalker2-Win64-Shipping.exe`)
+* **Cyberpunk 2077** (`Cyberpunk2077.exe`)
+* **Red Dead Redemption 2** (`RDR2.exe`)
+* **Elden Ring** (`eldenring.exe`)
+* **Baldur's Gate 3** (`bg3.exe`, `bg3_dx11.exe`)
+* **The Witcher 3: Wild Hunt** (`witcher3.exe`)
+* **Starfield** (`Starfield.exe`)
+* **Hogwarts Legacy** (`HogwartsLegacy.exe`)
+* **Alan Wake 2** (`AlanWake2.exe`)
+* **God of War** (`GoW.exe`)
+* **Ghost of Tsushima** (`GhostOfTsushima.exe`)
+* **Marvel's Spider-Man Remastered & Miles Morales** (`Spider-Man.exe`, `MilesMorales.exe`)
+* **The Last of Us Part I** (`tloUp1.exe`)
+* **Horizon Zero Dawn & Forbidden West** (`HorizonZeroDawn.exe`, `HorizonForbiddenWest.exe`)
+* **DOOM Eternal** (`DOOMEternalx64vk.exe`)
+* **Resident Evil Series** (RE4 Remake, Village, RE2, RE3, RE7)
+* **Dying Light 2** (`DyingLightGame_x64_rwdi.exe`)
+* **Death Stranding** (`ds.exe`)
+* **Control** (`Control_DX12.exe`, `Control_DX11.exe`)
+* **Fallout 4** (`Fallout4.exe`)
+* **Skyrim Special Edition** (`SkyrimSE.exe`)
+* **Remnant II** (`Remnant2-Win64-Shipping.exe`)
+
+### 🚗 Vehicle & Driving Simulators
+* **BeamNG.drive** (`BeamNG.drive.x64.exe`, `BeamNG.drive.exe`)
+* **Euro Truck Simulator 2** (`eurotrucks2.exe`)
+* **American Truck Simulator** (`amtrucks.exe`)
+* **Forza Horizon 5 & 4** (`ForzaHorizon5.exe`, `ForzaHorizon4.exe`)
+* **Assetto Corsa & Competizione** (`acs.exe`, `acc.exe`)
+
+### 🌍 Co-op, Survival & Sandboxes
+* **Helldivers 2** (`helldivers2.exe`)
+* **Warhammer 40,000: Space Marine 2** (`Warhammer 40000 Space Marine 2 - Retail.exe`)
+* **Palworld** (`Palworld-Win64-Shipping.exe`)
+* **Sons of the Forest** (`SonsOfTheForest.exe`)
+* **Lethal Company** (`Lethal Company.exe`)
+* **Manor Lords** (`ManorLords-Win64-Shipping.exe`)
+* **Enshrouded** (`Enshrouded.exe`)
+* **Satisfactory** (`FactoryGame-Win64-Shipping.exe`)
+* **Deep Rock Galactic** (`FSD-Win64-Shipping.exe`)
+* **DayZ** (`DayZ_x64.exe`)
+* **Squad** (`SquadGame.exe`)
+* **ARMA 3** (`arma3_x64.exe`)
+* **Monster Hunter: World & Wilds** (`MonsterHunterWorld.exe`, `MonsterHunterWilds.exe`)
+
+### 🏙️ GTA, MTA, MMOs & Strategy
+* **Grand Theft Auto V / Online** (`GTA5.exe`, `PlayGTAV.exe`)
+* **Grand Theft Auto IV** (`GTAIV.exe`, `PlayGTAIV.exe`)
+* **Multi Theft Auto: San Andreas (incl. CCDPlanet)** (`proxy_sa.exe`, `gta_sa.exe`, `Multi Theft Auto.exe`, `CCDPlanet.exe`)
+* **SA-MP (San Andreas Multiplayer)** (`samp.exe`, `gta_sa.exe`)
+* **Hassle Online** (`hassle.exe`)
+* **ROB RUN** (`ROB RUN.exe`)
+* **Cities: Skylines 1 & 2** (`Cities2.exe`, `Cities.exe`)
+* **Dota 2** (`dota2.exe`)
+* **League of Legends** (`League of Legends.exe`)
+* **World of Warcraft** (`Wow.exe`, `WowClassic.exe`)
+* **Diablo IV** (`Diablo IV.exe`)
+* **Path of Exile 1 & 2** (`PathOfExile.exe`, `PathOfExile2.exe`)
+* **War Thunder** (`aces.exe`)
+* **World of Tanks** (`WorldOfTanks.exe`)
+* **Roblox** (`RobloxPlayerBeta.exe`)
+* **Rocket League** (`RocketLeague.exe`)
+* **Minecraft (Java)** (`javaw.exe`)
 
 ---
 
-## Technical Principle
+## 🔬 Technical Principle
 
 On modern multi-core processors, CPU Core 0 (logical processors 0 and 1) handles the majority of system interrupts:
-- Network packet processing (NIC DPC)
-- Audio rendering and USB polling
+- Network packet processing (NIC DPC/ISR)
+- Audio rendering and system timers
+- High-frequency USB polling (gaming mice at 1000–8000 Hz)
 - Windows background worker threads
 
-When compute-heavy game threads compete with system interrupts on Core 0, micro-stutters and frame pacing variance occur. By masking Core 0 out of the game's process affinity mask, the Windows kernel schedules the game exclusively across remaining physical cores.
+When compute-heavy game threads execute on Core 0, they compete with system interrupts. This causes frame pacing variance (micro-stutters) and severe 1% Low FPS dips. By masking Core 0 out of the game's process affinity mask, the Windows kernel schedules the game exclusively across remaining physical cores.
+
+### Affinity Mask Topology Calculation
 
 | Architecture | Total Cores / Threads | Windows Affinity Mask | Active Cores |
 | :--- | :--- | :--- | :--- |
@@ -50,34 +131,19 @@ When compute-heavy game threads compete with system interrupts on Core 0, micro-
 
 ---
 
-## Quick Start
+## 🛠️ Manager Features
 
-### Method 1: Interactive Manager & Drag-and-Drop
-1. Run `Game_NoCore0_Manager.bat` as Administrator.
-2. Select `[1]` to configure pre-defined popular titles, or drag and drop any game shortcut directly onto the `.bat` file.
-
-### Method 2: Direct Registry Import
-- Import `Preset_30_Games.reg` to configure 30 popular multiplayer titles in one click.
-- Import `Restore_Defaults.reg` at any time to return all games to default scheduling.
-
----
-
-## Project Structure
-
-```text
-Game-NoCore0-Optimizer/
-├── assets/
-│   └── banner.svg               # Vector architecture banner
-├── Game_NoCore0_Manager.bat     # Polyglot interactive manager (Drag & Drop)
-├── Steam_NoCore0.bat            # Dedicated lightweight Steam launcher
-├── Preset_30_Games.reg          # Pre-configured registry preset for 30 titles
-├── Restore_Defaults.reg         # 1-click restore to standard Windows affinity
-├── LICENSE                      # MIT License
-└── README.md                    # Documentation
-```
+Launch `Game_NoCore0_Manager.bat` to access the interactive bilingual menu:
+- `[1]` — Register 70+ popular titles in 1 click
+- `[2]` — Browse any `.exe` file via Explorer picker
+- `[3]` — Enter executable name manually
+- `[4]` — List all currently configured games
+- `[5]` — Remove a game from IFEO (restore default cores)
+- `[6]` — Remove ALL games (reset to defaults)
+- `[7]` — Add right-click Explorer context menu item (`Run without Core 0`)
+- `[L]` — Toggle interface language (English / Russian)
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+## 🔄 Revert to Defaults
+Import `Restore_Defaults.reg` to immediately remove all affinity registry keys and restore default Windows scheduling.
