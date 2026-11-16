@@ -6,6 +6,22 @@
 
 ![Banner](assets/banner.svg)
 
+---
+
+## ⚡ Quick Start (For Beginners in 30 Seconds)
+
+If you just downloaded the project and want the maximum performance boost with zero effort:
+
+1. **Extract** the downloaded `.zip` archive to any folder.
+2. **Double-click** `Game_NoCore0_Manager.bat`.
+3. In the menu that appears, **press `1` and hit Enter**.
+4. **Done!** All 30 popular multiplayer games (CS2, GTA V, Fortnite, Dota 2, MTA, etc.) are instantly configured in the Windows kernel.
+5. **Launch your games normally** (from Steam, Epic Games, server launchers, or desktop shortcuts). They will now automatically run without Core 0!
+
+> **Got a new game?** Simply drag and drop its desktop shortcut or `.exe` file onto `Game_NoCore0_Manager.bat`. That's it!
+
+---
+
 ## Features
 
 - **0% Background Overhead**: Implemented strictly via native Windows NT Image File Execution Options (`IFEO`). No resident background services, no RAM usage.
