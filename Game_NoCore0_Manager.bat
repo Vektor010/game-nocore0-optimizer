@@ -167,32 +167,89 @@ function Resolve-DroppedPath {
     return $p
 }
 
-# 30 Popular Games Preset
+# Master Preset: Competitive, Single-Player AAA, Sims & Sandboxes (70+ Games)
 $popularGames = @(
+    # Competitive & Shooters
     @{ Name = "Counter-Strike 2"; Exes = @("cs2.exe") },
-    @{ Name = "MTA: San Andreas / CCDPlanet"; Exes = @("proxy_sa.exe", "gta_sa.exe", "Multi Theft Auto.exe", "CCDPlanet.exe") },
-    @{ Name = "Hassle Online"; Exes = @("hassle.exe", "gta_sa.exe") },
-    @{ Name = "ROB RUN"; Exes = @("ROB RUN.exe") },
-    @{ Name = "BeamNG.drive"; Exes = @("BeamNG.drive.x64.exe", "BeamNG.drive.exe") },
-    @{ Name = "Euro Truck Simulator 2"; Exes = @("eurotrucks2.exe") },
-    @{ Name = "Grand Theft Auto V"; Exes = @("GTA5.exe", "PlayGTAV.exe") },
+    @{ Name = "Valorant"; Exes = @("VALORANT-Win64-Shipping.exe") },
     @{ Name = "Fortnite"; Exes = @("FortniteClient-Win64-Shipping.exe") },
-    @{ Name = "Dota 2"; Exes = @("dota2.exe") },
-    @{ Name = "Deadlock"; Exes = @("project8.exe") },
     @{ Name = "Apex Legends"; Exes = @("r5apex.exe") },
     @{ Name = "PUBG: BATTLEGROUNDS"; Exes = @("TslGame.exe") },
-    @{ Name = "Rust"; Exes = @("RustClient.exe") },
-    @{ Name = "Cyberpunk 2077"; Exes = @("Cyberpunk2077.exe") },
-    @{ Name = "Valorant"; Exes = @("VALORANT-Win64-Shipping.exe") },
     @{ Name = "Call of Duty / Warzone"; Exes = @("cod.exe") },
+    @{ Name = "Rainbow Six Siege"; Exes = @("RainbowSix.exe", "RainbowSix_Vulkan.exe") },
+    @{ Name = "Overwatch 2"; Exes = @("Overwatch.exe") },
+    @{ Name = "Deadlock"; Exes = @("project8.exe") },
+    @{ Name = "Marvel Rivals"; Exes = @("Marvel-Win64-Shipping.exe") },
+    @{ Name = "The Finals"; Exes = @("Discovery.exe") },
+    @{ Name = "Rust"; Exes = @("RustClient.exe") },
+    @{ Name = "Escape from Tarkov"; Exes = @("EscapeFromTarkov.exe") },
+    @{ Name = "Hunt: Showdown 1896"; Exes = @("HuntGame.exe") },
+    @{ Name = "Team Fortress 2"; Exes = @("tf_win64.exe", "tf.exe") },
+
+    # Single-Player AAA Masterpieces (Steam & Epic)
+    @{ Name = "Black Myth: Wukong"; Exes = @("b1-Win64-Shipping.exe") },
+    @{ Name = "S.T.A.L.K.E.R. 2: Heart of Chornobyl"; Exes = @("Stalker2-Win64-Shipping.exe") },
+    @{ Name = "Cyberpunk 2077"; Exes = @("Cyberpunk2077.exe") },
+    @{ Name = "Red Dead Redemption 2"; Exes = @("RDR2.exe") },
+    @{ Name = "Elden Ring"; Exes = @("eldenring.exe") },
+    @{ Name = "Baldur's Gate 3"; Exes = @("bg3.exe", "bg3_dx11.exe") },
+    @{ Name = "The Witcher 3: Wild Hunt"; Exes = @("witcher3.exe") },
+    @{ Name = "Starfield"; Exes = @("Starfield.exe") },
+    @{ Name = "Hogwarts Legacy"; Exes = @("HogwartsLegacy.exe") },
+    @{ Name = "Alan Wake 2"; Exes = @("AlanWake2.exe") },
+    @{ Name = "God of War"; Exes = @("GoW.exe") },
+    @{ Name = "Ghost of Tsushima"; Exes = @("GhostOfTsushima.exe") },
+    @{ Name = "Marvel's Spider-Man (Remastered / Miles Morales)"; Exes = @("Spider-Man.exe", "MilesMorales.exe") },
+    @{ Name = "The Last of Us Part I"; Exes = @("tloUp1.exe") },
+    @{ Name = "Horizon Zero Dawn / Forbidden West"; Exes = @("HorizonZeroDawn.exe", "HorizonForbiddenWest.exe") },
+    @{ Name = "DOOM Eternal"; Exes = @("DOOMEternalx64vk.exe") },
+    @{ Name = "Resident Evil Series (RE4, RE8, RE2, RE3, RE7)"; Exes = @("re4.exe", "re8.exe", "re2.exe", "re3.exe", "re7.exe") },
+    @{ Name = "Dying Light 2"; Exes = @("DyingLightGame_x64_rwdi.exe") },
+    @{ Name = "Death Stranding"; Exes = @("ds.exe") },
+    @{ Name = "Control"; Exes = @("Control_DX12.exe", "Control_DX11.exe") },
+    @{ Name = "Fallout 4"; Exes = @("Fallout4.exe") },
+    @{ Name = "Skyrim Special Edition"; Exes = @("SkyrimSE.exe") },
+    @{ Name = "Remnant II"; Exes = @("Remnant2-Win64-Shipping.exe") },
+
+    # Co-op, Survival, Sims & Sandboxes
+    @{ Name = "Helldivers 2"; Exes = @("helldivers2.exe") },
+    @{ Name = "Warhammer 40,000: Space Marine 2"; Exes = @("Warhammer 40000 Space Marine 2 - Retail.exe") },
+    @{ Name = "Palworld"; Exes = @("Palworld-Win64-Shipping.exe") },
+    @{ Name = "Sons of the Forest"; Exes = @("SonsOfTheForest.exe") },
+    @{ Name = "Lethal Company"; Exes = @("Lethal Company.exe") },
+    @{ Name = "Manor Lords"; Exes = @("ManorLords-Win64-Shipping.exe") },
+    @{ Name = "Enshrouded"; Exes = @("Enshrouded.exe") },
+    @{ Name = "Satisfactory"; Exes = @("FactoryGame-Win64-Shipping.exe") },
+    @{ Name = "Deep Rock Galactic"; Exes = @("FSD-Win64-Shipping.exe") },
+    @{ Name = "DayZ"; Exes = @("DayZ_x64.exe") },
+    @{ Name = "Squad"; Exes = @("SquadGame.exe") },
+    @{ Name = "ARMA 3"; Exes = @("arma3_x64.exe") },
+    @{ Name = "Monster Hunter: World & Wilds"; Exes = @("MonsterHunterWorld.exe", "MonsterHunterWilds.exe") },
+
+    # Racing & Driving Sims
+    @{ Name = "BeamNG.drive"; Exes = @("BeamNG.drive.x64.exe", "BeamNG.drive.exe") },
+    @{ Name = "Euro Truck Simulator 2"; Exes = @("eurotrucks2.exe") },
+    @{ Name = "American Truck Simulator"; Exes = @("amtrucks.exe") },
+    @{ Name = "Forza Horizon 5 & 4"; Exes = @("ForzaHorizon5.exe", "ForzaHorizon4.exe") },
+    @{ Name = "Assetto Corsa & Competizione"; Exes = @("acs.exe", "acc.exe") },
+
+    # GTA, MTA, Hassle, MMOs & Strategy
+    @{ Name = "Grand Theft Auto V"; Exes = @("GTA5.exe", "PlayGTAV.exe") },
+    @{ Name = "Grand Theft Auto IV"; Exes = @("GTAIV.exe", "PlayGTAIV.exe") },
+    @{ Name = "MTA: San Andreas / CCDPlanet"; Exes = @("proxy_sa.exe", "gta_sa.exe", "Multi Theft Auto.exe", "CCDPlanet.exe", "samp.exe") },
+    @{ Name = "Hassle Online"; Exes = @("hassle.exe", "gta_sa.exe") },
+    @{ Name = "ROB RUN"; Exes = @("ROB RUN.exe") },
+    @{ Name = "Cities: Skylines 1 & 2"; Exes = @("Cities2.exe", "Cities.exe") },
+    @{ Name = "Dota 2"; Exes = @("dota2.exe") },
+    @{ Name = "League of Legends"; Exes = @("League of Legends.exe") },
+    @{ Name = "World of Warcraft"; Exes = @("Wow.exe", "WowClassic.exe") },
+    @{ Name = "Diablo IV"; Exes = @("Diablo IV.exe") },
+    @{ Name = "Path of Exile 1 & 2"; Exes = @("PathOfExile.exe", "PathOfExile_x64.exe", "PathOfExileSteam.exe", "PathOfExile2.exe") },
     @{ Name = "War Thunder"; Exes = @("aces.exe") },
     @{ Name = "World of Tanks"; Exes = @("WorldOfTanks.exe") },
-    @{ Name = "Overwatch 2"; Exes = @("Overwatch.exe") },
-    @{ Name = "Rainbow Six Siege"; Exes = @("RainbowSix.exe", "RainbowSix_Vulkan.exe") },
-    @{ Name = "Escape from Tarkov"; Exes = @("EscapeFromTarkov.exe") },
     @{ Name = "Roblox"; Exes = @("RobloxPlayerBeta.exe") },
     @{ Name = "Rocket League"; Exes = @("RocketLeague.exe") },
-    @{ Name = "Marvel Rivals"; Exes = @("Marvel-Win64-Shipping.exe") }
+    @{ Name = "Minecraft (Java)"; Exes = @("javaw.exe") }
 )
 
 # ===================================================================
@@ -260,7 +317,7 @@ while ($true) {
     Write-Host $(if ($script:isRu){" [ИНФО] Метод:     Нативный реестр Windows NT (0% фона, 0 МБ ОЗУ, VAC/EAC safe)"}else{" [INFO] Engine:    Native Windows NT Registry (0% Background RAM, VAC/EAC safe)"}) -ForegroundColor Gray
     Write-Host "===================================================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host $(if ($script:isRu){" [1] Зарегистрировать 30 популярных игр (CS2, GTA V, Fortnite, Dota 2 и др.)"}else{" [1] Register 30 Popular Games (CS2, GTA V, Fortnite, Dota 2, etc.)"}) -ForegroundColor White
+    Write-Host $(if ($script:isRu){" [1] Зарегистрировать 70+ популярных игр (CS2, GTA V, Wukong, Stalker 2 и др.)"}else{" [1] Register 70+ Popular Games (CS2, GTA V, Wukong, Stalker 2, etc.)"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [2] Выбрать игру через проводник (кнопка 'Обзор')"}else{" [2] Browse .exe file via Explorer picker"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [3] Ввести имя файла .exe вручную (например: mygame.exe)"}else{" [3] Enter .exe file name manually (e.g. mygame.exe)"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [4] Список всех настроенных сейчас игр"}else{" [4] List all currently configured games"}) -ForegroundColor White
