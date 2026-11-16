@@ -43,7 +43,25 @@
 * **Hunt: Showdown 1896** (`HuntGame.exe`)
 * **Team Fortress 2** (`tf_win64.exe`, `tf.exe`)
 
+### 🔮 Игры 2025–2026 года и ожидаемые шедевры
+* **Grand Theft Auto VI (GTA 6)** (`GTA6.exe`, `PlayGTA6.exe`)
+* **Kingdom Come: Deliverance II** (`KingdomCome.exe`)
+* **Delta Force** (`DeltaForceClient-Win64-Shipping.exe`, `DeltaForce.exe`)
+* **Monster Hunter Wilds** (`MonsterHunterWilds.exe`)
+* **DOOM: The Dark Ages** (`DoomTheDarkAges.exe`, `DOOMTheDarkAges.exe`)
+* **Sid Meier's Civilization VII** (`Civ7.exe`, `CivilizationVII.exe`)
+* **Mafia: The Old Country** (`MafiaOldCountry.exe`, `MafiaTOC.exe`)
+* **Borderlands 4** (`Borderlands4.exe`, `Borderlands4-Win64-Shipping.exe`)
+* **Avowed** (`Avowed-Win64-Shipping.exe`, `Avowed.exe`)
+* **Dune: Awakening** (`DuneAwakening-Win64-Shipping.exe`)
+* **inZOI** (`inZOI-Win64-Shipping.exe`)
+* **Subnautica 2** (`Subnautica2.exe`)
+* **Crimson Desert** (`CrimsonDesert.exe`)
+* **Splitgate 2** (`Splitgate2-Win64-Shipping.exe`)
+* **Metaphor: ReFantazio** (`METAPHOR.exe`)
+
 ### ⚔️ Одиночные AAA-шедевры (Steam, Epic Games, GOG)
+* **The Elder Scrolls V: Skyrim (Legendary, Special Edition, VR)** (`TESV.exe`, `SkyrimSE.exe`, `SkyrimVR.exe`)
 * **Black Myth: Wukong** (`b1-Win64-Shipping.exe`)
 * **S.T.A.L.K.E.R. 2: Heart of Chornobyl** (`Stalker2-Win64-Shipping.exe`)
 * **Cyberpunk 2077** (`Cyberpunk2077.exe`)
@@ -65,14 +83,14 @@
 * **Death Stranding** (`ds.exe`)
 * **Control** (`Control_DX12.exe`, `Control_DX11.exe`)
 * **Fallout 4** (`Fallout4.exe`)
-* **Skyrim Special Edition** (`SkyrimSE.exe`)
 * **Remnant II** (`Remnant2-Win64-Shipping.exe`)
 
 ### 🚗 Автосимуляторы и гонки
+* **Линейка Forza Horizon (FH6, FH5, FH4)** (`ForzaHorizon6.exe`, `ForzaHorizon5.exe`, `ForzaHorizon4.exe`)
+* **Forza Motorsport (Steam, Xbox App / Store, FM7)** (`forza_steamworks_release_final.exe`, `forza_gaming.desktop.x64_release_final.exe`, `ForzaMotorsport7.exe`)
 * **BeamNG.drive** (`BeamNG.drive.x64.exe`, `BeamNG.drive.exe`)
 * **Euro Truck Simulator 2** (`eurotrucks2.exe`)
 * **American Truck Simulator** (`amtrucks.exe`)
-* **Forza Horizon 5 & 4** (`ForzaHorizon5.exe`, `ForzaHorizon4.exe`)
 * **Assetto Corsa & Competizione** (`acs.exe`, `acc.exe`)
 
 ### 🌍 Кооператив, выживание и песочницы
