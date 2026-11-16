@@ -208,8 +208,25 @@ $popularGames = @(
     @{ Name = "Death Stranding"; Exes = @("ds.exe") },
     @{ Name = "Control"; Exes = @("Control_DX12.exe", "Control_DX11.exe") },
     @{ Name = "Fallout 4"; Exes = @("Fallout4.exe") },
-    @{ Name = "Skyrim Special Edition"; Exes = @("SkyrimSE.exe") },
+    @{ Name = "Skyrim (Original, Special Edition, VR)"; Exes = @("TESV.exe", "SkyrimSE.exe", "SkyrimVR.exe") },
     @{ Name = "Remnant II"; Exes = @("Remnant2-Win64-Shipping.exe") },
+
+    # 2025 - 2026 Next-Gen Releases & Upcoming Masterpieces
+    @{ Name = "Grand Theft Auto VI (GTA 6)"; Exes = @("GTA6.exe", "PlayGTA6.exe") },
+    @{ Name = "Kingdom Come: Deliverance II"; Exes = @("KingdomCome.exe") },
+    @{ Name = "Delta Force"; Exes = @("DeltaForceClient-Win64-Shipping.exe", "DeltaForce.exe") },
+    @{ Name = "Monster Hunter Wilds"; Exes = @("MonsterHunterWilds.exe") },
+    @{ Name = "DOOM: The Dark Ages"; Exes = @("DoomTheDarkAges.exe", "DOOMTheDarkAges.exe") },
+    @{ Name = "Sid Meier's Civilization VII"; Exes = @("Civ7.exe", "CivilizationVII.exe") },
+    @{ Name = "Mafia: The Old Country"; Exes = @("MafiaOldCountry.exe", "MafiaTOC.exe") },
+    @{ Name = "Borderlands 4"; Exes = @("Borderlands4.exe", "Borderlands4-Win64-Shipping.exe") },
+    @{ Name = "Avowed"; Exes = @("Avowed-Win64-Shipping.exe", "Avowed.exe") },
+    @{ Name = "Dune: Awakening"; Exes = @("DuneAwakening-Win64-Shipping.exe") },
+    @{ Name = "inZOI"; Exes = @("inZOI-Win64-Shipping.exe") },
+    @{ Name = "Subnautica 2"; Exes = @("Subnautica2.exe") },
+    @{ Name = "Crimson Desert"; Exes = @("CrimsonDesert.exe") },
+    @{ Name = "Splitgate 2"; Exes = @("Splitgate2-Win64-Shipping.exe") },
+    @{ Name = "Metaphor: ReFantazio"; Exes = @("METAPHOR.exe") },
 
     # Co-op, Survival, Sims & Sandboxes
     @{ Name = "Helldivers 2"; Exes = @("helldivers2.exe") },
@@ -230,7 +247,8 @@ $popularGames = @(
     @{ Name = "BeamNG.drive"; Exes = @("BeamNG.drive.x64.exe", "BeamNG.drive.exe") },
     @{ Name = "Euro Truck Simulator 2"; Exes = @("eurotrucks2.exe") },
     @{ Name = "American Truck Simulator"; Exes = @("amtrucks.exe") },
-    @{ Name = "Forza Horizon 5 & 4"; Exes = @("ForzaHorizon5.exe", "ForzaHorizon4.exe") },
+    @{ Name = "Forza Horizon Series (FH6, FH5, FH4)"; Exes = @("ForzaHorizon6.exe", "ForzaHorizon5.exe", "ForzaHorizon4.exe") },
+    @{ Name = "Forza Motorsport (Steam, Xbox, FM7)"; Exes = @("forza_steamworks_release_final.exe", "forza_gaming.desktop.x64_release_final.exe", "ForzaMotorsport7.exe") },
     @{ Name = "Assetto Corsa & Competizione"; Exes = @("acs.exe", "acc.exe") },
 
     # GTA, MTA, Hassle, MMOs & Strategy
@@ -317,7 +335,7 @@ while ($true) {
     Write-Host $(if ($script:isRu){" [ИНФО] Метод:     Нативный реестр Windows NT (0% фона, 0 МБ ОЗУ, VAC/EAC safe)"}else{" [INFO] Engine:    Native Windows NT Registry (0% Background RAM, VAC/EAC safe)"}) -ForegroundColor Gray
     Write-Host "===================================================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host $(if ($script:isRu){" [1] Зарегистрировать 70+ популярных игр (CS2, GTA V, Wukong, Stalker 2 и др.)"}else{" [1] Register 70+ Popular Games (CS2, GTA V, Wukong, Stalker 2, etc.)"}) -ForegroundColor White
+    Write-Host $(if ($script:isRu){" [1] Зарегистрировать 100+ популярных игр (CS2, GTA 6/5, FH6, Скайрим, Wukong, KCD 2 и др.)"}else{" [1] Register 100+ Popular Games (CS2, GTA 6/5, FH6, Skyrim, Wukong, KCD 2, etc.)"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [2] Выбрать игру через проводник (кнопка 'Обзор')"}else{" [2] Browse .exe file via Explorer picker"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [3] Ввести имя файла .exe вручную (например: mygame.exe)"}else{" [3] Enter .exe file name manually (e.g. mygame.exe)"}) -ForegroundColor White
     Write-Host $(if ($script:isRu){" [4] Список всех настроенных сейчас игр"}else{" [4] List all currently configured games"}) -ForegroundColor White
