@@ -1,10 +1,15 @@
 ﻿Windows Registry Editor Version 5.00
 
 ; ===================================================================
-; NoCore0 Gaming Optimizer: 100+ Master Games Preset (2026 Edition)
+; NoCore0 Gaming Optimizer: 140+ Master Games Preset (2026 Ultimate Edition)
 ; Mask 0x0000FFFC (65532) for 8C/16T processors (Ryzen 7 9850X3D, 7800X3D, etc.)
-; Isolates Core 0 for OS interrupts, dedicates Cores 1-7 to games
 ; ===================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\7DaysToDie.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\AbioticFactor-Win64-Shipping.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\acc.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
@@ -19,6 +24,9 @@
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\amtrucks.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ArkAscended.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\arma3_x64.exe\PerfOptions]
@@ -37,6 +45,9 @@
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\BeamNG.drive.x64.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Bellwright-Win64-Shipping.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\bg3.exe\PerfOptions]
@@ -67,6 +78,9 @@
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cod.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ConanSandbox.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Control_DX11.exe\PerfOptions]
@@ -103,9 +117,6 @@
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\DoomTheDarkAges.exe\PerfOptions]
-"CpuAffinityMask"=dword:0000FFFC
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\DOOMTheDarkAges.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\dota2.exe\PerfOptions]
@@ -162,10 +173,16 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\FSD-Win64-Shipping.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GH.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GhostOfTsushima.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GoW.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Grounded-Win64-Shipping.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\gta_sa.exe\PerfOptions]
@@ -196,6 +213,12 @@
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\HuntGame.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Icarus.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Icarus-Win64-Shipping.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\inZOI-Win64-Shipping.exe\PerfOptions]
@@ -240,7 +263,19 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Multi Theft Auto.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\NMS.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ONCE_HUMAN.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\OnceHuman.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Overwatch.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\PacificDrive-Win64-Shipping.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Palworld-Win64-Shipping.exe\PerfOptions]
@@ -258,6 +293,9 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\PathOfExileSteam.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Planet Crafter.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\PlayGTA6.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
@@ -270,10 +308,16 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\project8.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ProjectZomboid64.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\proxy_sa.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\r5apex.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Raft.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RainbowSix.exe\PerfOptions]
@@ -318,6 +362,12 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\samp.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SCUM.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ShooterGame.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SkyrimSE.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
@@ -345,6 +395,9 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Subnautica2.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Sunkenland.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\TESV.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
@@ -354,13 +407,22 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\tf_win64.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\TheForest.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\tloUp1.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\TslGame.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\valheim.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\VALORANT-Win64-Shipping.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\VRising.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Warhammer 40000 Space Marine 2 - Retail.exe\PerfOptions]
@@ -376,5 +438,8 @@
 "CpuAffinityMask"=dword:0000FFFC
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\WowClassic.exe\PerfOptions]
+"CpuAffinityMask"=dword:0000FFFC
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\WS-Win64-Shipping.exe\PerfOptions]
 "CpuAffinityMask"=dword:0000FFFC
 
