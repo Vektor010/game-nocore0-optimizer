@@ -12,40 +12,116 @@
 
 Если вы только что скачали проект и хотите получить максимум FPS без лишней возни:
 
-1. **Распакуйте** скачанный архив `.zip` в любую удобную папку.
+1. **Распакуйте** скачанный архив `.zip` в любую папку.
 2. **Запустите двойным кликом** файл `Game_NoCore0_Manager.bat`.
 3. В появившемся окне **нажмите клавишу `1` и затем Enter**.
-4. **Всё готово!** 30 популярных онлайн-игр (CS2, GTA V, Fortnite, Dota 2, MTA, ROB RUN и др.) навсегда зарегистрированы в Windows.
-5. **Запускайте свои игры абсолютно как обычно** (из библиотеки Steam, лаунчера сервера или ярлыка на рабочем столе). Они сами стартуют на ядрах 1–7 без Ядра 0!
+4. **Всё готово!** 70+ популярных игр (CS2, GTA V, Wukong, Stalker 2, RDR2, Elden Ring, MTA, Cyberpunk и др.) навсегда зарегистрированы в Windows.
+5. **Запускайте свои игры как обычно** (из Steam, Epic Games, лаунчера сервера или с рабочего стола). Они сами стартуют на ядрах 1–7 без Ядра 0!
 
-> **Скачали новую игру?** Просто перетащите мышкой её ярлык с рабочего стола на `Game_NoCore0_Manager.bat`. Твик применится за 0.1 секунды!
-
----
+> 💡 **Скачали новую игру?** Просто перетащите мышкой её ярлык с рабочего стола на `Game_NoCore0_Manager.bat`. Твик применится за 0.1 секунды!
 
 ---
 
-## Главные преимущества
+## 🎮 Список поддерживаемых игр (Пакет 70+ хитов)
 
-- **0% фоновой нагрузки:** Работает через встроенный механизм Windows NT — **Image File Execution Options (IFEO)**. Никаких резидентных служб, фоновых процессов и пожирания ОЗУ.
-- **Работает отовсюду:** Твик срабатывает независимо от способа запуска — через Steam, Epic Games, лаунчеры серверов (MTA CCDPlanet, Hassle Online, FaceIT) или обычный ярлык на рабочем столе.
-- **100% безопасно для античитов:** Использует штатный параметр ядра Windows `CpuAffinityMask`. Не модифицирует файлы игры, не внедряет DLL и не триггерит VAC, Easy Anti-Cheat, BattlEye или Riot Vanguard.
-- **Автоматический расчет топологии:** Скрипт сам определяет количество ядер/потоков и состояние SMT, рассчитывая точную маску (например, `0xFFFC` для 8C/16T процессоров).
-- **Удобный Drag-and-Drop:** Просто перетащите ярлык или `.exe` файл любой новой игры на батник — твик применится за 0.1 секунды.
-- **100% обратимость:** В комплект входит файл моментального отката всех настроек к стандартным значениям Windows.
+Пресет `[1]` и файл `Preset_Popular_Games.reg` содержат готовые настройки для главных игр Steam, Epic Games, Battle.net, Rockstar и кастомных лаунчеров:
+
+### 🏆 Соревновательные шутеры и Battle Royale
+* **Counter-Strike 2** (`cs2.exe`)
+* **VALORANT** (`VALORANT-Win64-Shipping.exe`)
+* **Fortnite** (`FortniteClient-Win64-Shipping.exe`)
+* **Apex Legends** (`r5apex.exe`)
+* **PUBG: BATTLEGROUNDS** (`TslGame.exe`)
+* **Call of Duty: Warzone / BO6 / MW3** (`cod.exe`)
+* **Rainbow Six Siege** (`RainbowSix.exe`, `RainbowSix_Vulkan.exe`)
+* **Overwatch 2** (`Overwatch.exe`)
+* **Deadlock** (`project8.exe`)
+* **Marvel Rivals** (`Marvel-Win64-Shipping.exe`)
+* **The Finals** (`Discovery.exe`)
+* **Rust** (`RustClient.exe`)
+* **Escape from Tarkov** (`EscapeFromTarkov.exe`)
+* **Hunt: Showdown 1896** (`HuntGame.exe`)
+* **Team Fortress 2** (`tf_win64.exe`, `tf.exe`)
+
+### ⚔️ Одиночные AAA-шедевры (Steam, Epic Games, GOG)
+* **Black Myth: Wukong** (`b1-Win64-Shipping.exe`)
+* **S.T.A.L.K.E.R. 2: Heart of Chornobyl** (`Stalker2-Win64-Shipping.exe`)
+* **Cyberpunk 2077** (`Cyberpunk2077.exe`)
+* **Red Dead Redemption 2** (`RDR2.exe`)
+* **Elden Ring** (`eldenring.exe`)
+* **Baldur's Gate 3** (`bg3.exe`, `bg3_dx11.exe`)
+* **Ведьмак 3: Дикая Охота** (`witcher3.exe`)
+* **Starfield** (`Starfield.exe`)
+* **Hogwarts Legacy** (`HogwartsLegacy.exe`)
+* **Alan Wake 2** (`AlanWake2.exe`)
+* **God of War** (`GoW.exe`)
+* **Ghost of Tsushima** (`GhostOfTsushima.exe`)
+* **Marvel's Spider-Man** (`Spider-Man.exe`, `MilesMorales.exe`)
+* **The Last of Us Part I** (`tloUp1.exe`)
+* **Horizon Zero Dawn & Forbidden West** (`HorizonZeroDawn.exe`, `HorizonForbiddenWest.exe`)
+* **DOOM Eternal** (`DOOMEternalx64vk.exe`)
+* **Серия Resident Evil** (RE4 Remake, Village, RE2, RE3, RE7)
+* **Dying Light 2** (`DyingLightGame_x64_rwdi.exe`)
+* **Death Stranding** (`ds.exe`)
+* **Control** (`Control_DX12.exe`, `Control_DX11.exe`)
+* **Fallout 4** (`Fallout4.exe`)
+* **Skyrim Special Edition** (`SkyrimSE.exe`)
+* **Remnant II** (`Remnant2-Win64-Shipping.exe`)
+
+### 🚗 Автосимуляторы и гонки
+* **BeamNG.drive** (`BeamNG.drive.x64.exe`, `BeamNG.drive.exe`)
+* **Euro Truck Simulator 2** (`eurotrucks2.exe`)
+* **American Truck Simulator** (`amtrucks.exe`)
+* **Forza Horizon 5 & 4** (`ForzaHorizon5.exe`, `ForzaHorizon4.exe`)
+* **Assetto Corsa & Competizione** (`acs.exe`, `acc.exe`)
+
+### 🌍 Кооператив, выживание и песочницы
+* **Helldivers 2** (`helldivers2.exe`)
+* **Warhammer 40,000: Space Marine 2** (`Warhammer 40000 Space Marine 2 - Retail.exe`)
+* **Palworld** (`Palworld-Win64-Shipping.exe`)
+* **Sons of the Forest** (`SonsOfTheForest.exe`)
+* **Lethal Company** (`Lethal Company.exe`)
+* **Manor Lords** (`ManorLords-Win64-Shipping.exe`)
+* **Enshrouded** (`Enshrouded.exe`)
+* **Satisfactory** (`FactoryGame-Win64-Shipping.exe`)
+* **Deep Rock Galactic** (`FSD-Win64-Shipping.exe`)
+* **DayZ** (`DayZ_x64.exe`)
+* **Squad** (`SquadGame.exe`)
+* **ARMA 3** (`arma3_x64.exe`)
+* **Monster Hunter: World & Wilds** (`MonsterHunterWorld.exe`, `MonsterHunterWilds.exe`)
+
+### 🏙️ GTA, MTA, MMO и сетевые платформы
+* **Grand Theft Auto V / Online** (`GTA5.exe`, `PlayGTAV.exe`)
+* **Grand Theft Auto IV** (`GTAIV.exe`, `PlayGTAIV.exe`)
+* **Multi Theft Auto: San Andreas (вкл. CCDPlanet)** (`proxy_sa.exe`, `gta_sa.exe`, `Multi Theft Auto.exe`, `CCDPlanet.exe`)
+* **SA-MP (San Andreas Multiplayer)** (`samp.exe`, `gta_sa.exe`)
+* **Hassle Online** (`hassle.exe`)
+* **ROB RUN** (`ROB RUN.exe`)
+* **Cities: Skylines 1 & 2** (`Cities2.exe`, `Cities.exe`)
+* **Dota 2** (`dota2.exe`)
+* **League of Legends** (`League of Legends.exe`)
+* **World of Warcraft** (`Wow.exe`, `WowClassic.exe`)
+* **Diablo IV** (`Diablo IV.exe`)
+* **Path of Exile 1 & 2** (`PathOfExile.exe`, `PathOfExile2.exe`)
+* **War Thunder** (`aces.exe`)
+* **World of Tanks** (`WorldOfTanks.exe`)
+* **Roblox** (`RobloxPlayerBeta.exe`)
+* **Rocket League** (`RocketLeague.exe`)
+* **Minecraft (Java)** (`javaw.exe`)
 
 ---
 
-## В чем суть твика и почему это работает?
+## 🔬 В чем суть твика и почему это работает?
 
-В архитектуре процессоров x86-64 и планировщике Windows ядро **Core 0 (логические процессоры CPU 0 и CPU 1)** исторически берет на себя подавляющее большинство аппаратных прерываний системы:
-- Сетевой стек (DPC/ISR прерывания сетевой карты)
-- Вывод звука и системные таймеры
-- Опрос USB-портов (мышь с высокой частотой опроса 1000–8000 Гц, клавиатура)
+В архитектуре процессоров x86-64 и планировщике Windows ядро **Core 0 (логические процессоры CPU 0 и CPU 1)** исторически берет на себя большинство аппаратных прерываний системы:
+- Сетевой стек (DPC/ISR прерывания сетевого контроллера)
+- Системные таймеры и вывод аудио
+- Высокочастотный опрос USB (игровые мыши 1000–8000 Гц)
 - Фоновые службы Windows
 
-Когда требовательные потоки игры (особенно рендеринг и симуляция физики) выполняются на том же Ядре 0, они начинают конкурировать с системными прерываниями. Это приводит к разбросу фреймтайма (micro-stutters) и резким просадкам 1% и 0.1% Low FPS.
+Когда требовательные потоки игры выполняются на том же Ядре 0, они конкурируют с системными прерываниями. Это порождает задержки фреймтайма (micro-stutters) и просадки 1% Low FPS. 
 
-Исключив Ядро 0 из маски соответствия игры, мы отдаем Ядро 0 полностью под нужды Windows и периферии, а движок игры работает на чистых, ненагруженных ядрах 1–7.
+Исключив Ядро 0 из маски соответствия игры, мы оставляем Ядро 0 для системных прерываний, а игра использует чистые, ненагруженные ядра 1–7.
 
 ### Таблица расчета масок аффинити
 
@@ -57,30 +133,19 @@
 
 ---
 
-## Инструкция по использованию
+## 🛠️ Функции скрипта Game_NoCore0_Manager.bat
 
-### Вариант 1: Быстрое добавление любой игры (Drag & Drop)
-1. Возьмите ярлык игры с рабочего стола или её `.exe` файл.
-2. Перетащите его мышкой на файл `Game_NoCore0_Manager.bat`.
-3. Окно покажет зеленый статус успешного добавления и закроется. Игра настроена навсегда!
-
-### Вариант 2: Готовый пресет на 30 игр (1 клик)
-Запустите файл `Preset_30_Games.reg` от имени Администратора. Он сразу пропишет маску `0xFFFC` для 30 популярных онлайн-хитов:
-* **Шутеры и Battle Royale:** Counter-Strike 2, Fortnite, Apex Legends, PUBG, Call of Duty (Warzone), Valorant, Rainbow Six Siege, Overwatch 2, Marvel Rivals, Deadlock, Rust, Escape from Tarkov.
-* **MOBA и Онлайн:** Dota 2, GTA V / Online, MTA:SA (включая CCDPlanet), Hassle Online, War Thunder, World of Tanks, Roblox, Rocket League, ROB RUN.
-* **Автосимуляторы и песочницы:** BeamNG.drive, Euro Truck Simulator 2, Cyberpunk 2077.
-
-### Вариант 3: Интерактивное меню
-Запустите `Game_NoCore0_Manager.bat` двойным кликом:
-- `[1]` — Автоматически применить пакет популярных игр
-- `[2]` — Выбрать любой `.exe` через стандартное окно «Обзор» проводника
+Запустите `Game_NoCore0_Manager.bat` двойным кликом для доступа к интерактивному меню:
+- `[1]` — Зарегистрировать 70+ популярных игр в 1 клик
+- `[2]` — Выбрать любой `.exe` через окно «Обзор» проводника
 - `[3]` — Ввести имя файла процесса вручную
 - `[4]` — Посмотреть список всех активных игр без Ядра 0
 - `[5]` — Удалить конкретную игру (вернуть стандартные ядра)
 - `[6]` — Полный сброс всех твиков
-- `[7]` — Добавить пункт в меню правой кнопки мыши (ПКМ на любой `.exe` -> *"🎮 Запускать без Ядра 0"*)
+- `[7]` — Добавить пункт в меню правой кнопки мыши (ПКМ на любой `.exe` $\rightarrow$ *"🎮 Запускать без Ядра 0"*)
+- `[L]` — Переключение языка интерфейса (English / Русский)
 
 ---
 
-## Как вернуть всё по умолчанию (Откат)
-Если вы захотите вернуть стандартное поведение Windows, просто запустите файл `Restore_Defaults.reg`. Он мгновенно удалит все созданные ключи аффинити из реестра.
+## 🔄 Как вернуть всё по умолчанию (Откат)
+Запустите файл `Restore_Defaults.reg`. Он мгновенно удалит все созданные ключи аффинити из реестра и вернет стандартное поведение Windows.
