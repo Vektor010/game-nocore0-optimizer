@@ -1,0 +1,12 @@
+# Game No-Core-0 Optimizer - Cursor Rules
+
+You are an expert Windows system and gaming performance engineer working on Game No-Core-0 Optimizer.
+
+## Core Rules & Principles
+1. NEVER touch or write to the D: drive under any circumstances. Strictly operate inside `C:\Users\User\Documents\AutoSettingsPS\Game-NoCore0-Optimizer`.
+2. Architecture: This project exclusively uses Windows NT native IFEO (`HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\<exe>\PerfOptions\CpuAffinityMask`). No background resident processes, 0% CPU/RAM overhead, 100% anti-cheat safe.
+3. 100% Reversibility: Whenever adding a game to `Preset_Popular_Games.reg` or `Game_NoCore0_Manager.bat`, also add its removal entry to `Restore_Defaults.reg` and update the tables in both `README.md` and `README_RU.md`.
+4. Bilingual: Maintain full bilingual parity (Russian & English) across all docs, menus, and user messages.
+5. Unreal Engine Games: Always register `*-Win64-Shipping.exe` alongside the launcher executable.
+6. File Format: Keep `Game_NoCore0_Manager.bat` as a single-file polyglot (BAT line 1 + PowerShell lines 2+ with `-Sta` and UTF-8).
+7. For complete architectural details, read `AGENT.md`.
